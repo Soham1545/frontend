@@ -10,7 +10,11 @@ const Leaderboard = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
+        // console.log("SS");
+        
         const response = await axios.get("http://127.0.0.1:5000/api/leaderboard");
+        // console.log(users);
+        
         setUsers(response.data);
         setLoading(false);
       } catch (err) {
